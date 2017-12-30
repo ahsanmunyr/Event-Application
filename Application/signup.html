@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="lib/boot.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <title>Application</title>
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBMmZObx9CeGn7jIwT9ABUtkctCT2PgxKI",
+            authDomain: "event-application-a8eca.firebaseapp.com",
+            databaseURL: "https://event-application-a8eca.firebaseio.com",
+            projectId: "event-application-a8eca",
+            storageBucket: "event-application-a8eca.appspot.com",
+            messagingSenderId: "815805395872"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<header>
+    <img src="img/back.png" alt="" class="project">
+</header>
+
+<body>
+
+    <div>
+        <!-- <h1 id="head"><span class="badge badge-success">Event Application</span></h1> -->
+        <form id="ahsan">
+            <h1 id="head"><span class="badge badge-success">Event Application</span></h1>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4" class="col-form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+
+                    <small id="passwordHelpInline" class="text-muted">
+                        email@example.com
+                      </small>
+                    <div class="invalid-feedback">
+                        Please provide a valid email address.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4" class="col-form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <small id="passwordHelpInline" class="text-muted">
+                        Must be 8-20 characters long.
+                      </small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress" class="col-form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <div class="invalid-feedback">
+                    Please provide a valid address.
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity" class="col-form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState" class="col-form-label">Province</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option value="Sindh">Sindh</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="khyber Pakhtunkhwa">khyber Pakhtunkhwa</option>
+                        <option value="Balochistan">Balochistan</option>
+                        <option value="Kashmir">Kashmir</option>
+                </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip" class="col-form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <div class="well">
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth">
+                </div>
+            </div>
+
+            <div class="well">
+            </div>
+
+            <label for="inputState" class="col-form-label">Gender</label>
+            <select class="custom-select d-block my-3" id="sex" required>
+                    <option value="">Choose...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+
+            <div class="form-group">
+                <div class="form-check">
+                    <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" required>
+                            <span class="custom-control-indicator"></span>
+                            <p>
+                                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy
+                                </p>
+                            
+                          </label>
+                </div>
+
+            </div>
+
+            <a class="btn btn-primary" role="button" id="middle" onclick="submit()">Create an account</a>
+            <br>
+            <a class="btn btn-primary" href="login/login.html" role="button" id="middle">Log-In</a>
+            <!-- <a href="login/login.html">Ahsan</a> -->
+        </form>
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/popper.js"></script>
+    <script src="lib/boot.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bootstrap/assets/js/vendor/jquery-slim.min.js"></script>
+</body>
+<script src="source/signup.js"></script>
+
+</html>

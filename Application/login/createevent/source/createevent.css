@@ -1,0 +1,75 @@
+#ahsan {
+    margin: 0 auto;
+    position: center;
+    position: relative;
+}
+
+#br {
+    margin-top: 5%;
+}
+
+#margin {
+    padding-top: 15%;
+    width: 80%;
+    margin: 0 auto;
+    position: center;
+    position: relative;
+    padding-bottom: 5%;
+    color: black;
+}
+
+
+/* #margin.class {
+    padding-top: 5%;
+    width: 50%;
+    margin: 0 auto;
+    position: center;
+    position: relative;
+} */
+
+#form {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 80%;
+    margin: 0 auto;
+    position: center;
+    display: block;
+}
+
+#head {
+    color: #ffffff;
+}
+
+#button {
+    width: 40%;
+    margin: 0 auto;
+    position: center;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+#color {
+    color: aliceblue;
+}
+
+.project {
+    width: 100%;
+    min-height: 100vh;
+    opacity: 5%;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.5;
+    position: fixed;
+}
+
+#div {
+    opacity: 0.7;
+}
+
+label.upload-group {
+    width: 60px;
+    height: 20px;
+}

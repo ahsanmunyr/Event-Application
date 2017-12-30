@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="../../lib/boot.css">
+    <link rel="stylesheet" href="source/createevent.css">
+    <link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css">
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBMmZObx9CeGn7jIwT9ABUtkctCT2PgxKI",
+            authDomain: "event-application-a8eca.firebaseapp.com",
+            databaseURL: "https://event-application-a8eca.firebaseio.com",
+            projectId: "event-application-a8eca",
+            storageBucket: "event-application-a8eca.appspot.com",
+            messagingSenderId: "815805395872"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<header>
+    <img src="img/event2.jpg" alt="" class="project">
+</header>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" onclick="logout()" id="color" href="../../signup.html">Logout</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Events/events.html" target="_blank">Events
+                                    
+                                      </a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                                <a class="nav-link" href="create/create.html" target="_blank">Create Events</a>
+                            </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <h1 id="Name"></h1> -->
+    <div id="margin">
+        <div id="div">
+            <div class="card">
+
+
+                <form id="form">
+                    <h1><span class="badge badge-warning" id="head">Create Event</span></h1>
+                    <br id="br">
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10" id="Name">
+
+                        </div>
+
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10" id="Email">
+
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Event Name</label>
+                        <div class="col-sm-10">
+                            <input type="Text" class="form-control" id="eventName" placeholder="Event Name">
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Event Location</label>
+                        <div class="col-sm-10">
+                            <select id="inputLocation" class="form-control">
+                            <option selected>Choose...</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Quetta">Quetta</option>
+                            <option value="Muzaffarabad">Muzaffarabad</option>
+                    </select>
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Event Time</label>
+                        <div class="col-sm-10">
+                            <input type="time" class="form-control" id="eventtime">
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Event Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="eventdate">
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Phone Number</label>
+                        <div class="col-sm-10">
+                            <input type="Text" class="form-control" id="inputNumber" placeholder="Phone Number with (Counrty Code)">
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-6 col-form-label">How many attendees do you expect?</label>
+                        <div class="col-sm-6">
+                            <select id="people" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="Fewer than 150">Fewer than 150</option>
+                                <option value="Between 150 and 500">Between 150 and 500</option>
+                                <option value="Between 500 and 1000">Between 500 and 1000</option>
+                                <option value="Between 1000 and 5000">Between 1000 and 5000</option>
+                                <option value="More than 5000">More than 5000</option>
+                        </select>
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-6 col-form-label">How long is your event?</label>
+                        <div class="col-sm-6">
+                            <select id="timeEvent" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="Half day">Half day</option>
+                                <option value="One full day">One full day</option>
+                                <option value="Multiple days">Multiple days</option>
+                        </select>
+                        </div>
+                        <hr id="br">
+                        <label for="staticEmail" class="col-sm-6 col-form-label">How did you hear about?</label>
+                        <div class="col-sm-6">
+                            <select id="hearAbout" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option value="Friends">Friends</option>
+                                    <option value="From Social Media">From Social Media</option>
+                                    <option value="I recived your email">I recived your email</option>
+                            </select>
+                        </div>
+                        <!-- 
+                        <div class="col-sm-10">
+                            <br>
+                            <label for="exampleFormControlFile1">Image file
+                                <progress value="0" max="100" id="uploader">0%</progress>
+                                <br>
+                                <br>
+                            <input type="file" class="upload-group" id="fileButton">
+
+                            </label> -->
+                        <!-- <span><button type="button" class="btn btn-outline-dark" id="uploadButton" onclick="uploadFile()">Upload</button></span> -->
+                        <!-- </div> -->
+
+
+
+
+                        <br>
+                        <br>
+
+                        <label for="staticEmail" class="col-sm-6 col-form-label">Description</label>
+                        <br>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="3" id="eventdescription"></textarea>
+                        </div>
+                        <!-- <button type="button" class="btn btn-info" onclick="submit()" id="button">Submit</button> -->
+                    </div>
+                </form>
+                <button type="button" class="btn btn-outline-primary" onclick="submit()" id="button">Submit</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../lib/jquery.js"></script>
+    <script src="../../lib/popper.js"></script>
+    <script src="../../lib/boot.js"></script>
+    <script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../bootstrap/assets/js/vendor/jquery-slim.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
+</body>
+<script src="source/createevent.js"></script>
+
+</html>

@@ -1,0 +1,51 @@
+#ahsan {
+    padding-top: 7%;
+    width: 50%;
+    margin: 0 auto;
+    position: center;
+    position: relative;
+}
+
+
+/* #head {
+    width: 50%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+} */
+
+
+/* #create {
+    position: center;
+    position: relative;
+} */
+
+.project {
+    width: 100%;
+    min-height: 100vh;
+    opacity: 5%;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.5;
+    position: fixed;
+}
+
+#middle {
+    margin-bottom: 2%;
+    width: 80%;
+    margin: 0 auto;
+    position: center;
+    display: block;
+    position: relative;
+    color: white;
+}
+
+
+/* #border {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+} */
